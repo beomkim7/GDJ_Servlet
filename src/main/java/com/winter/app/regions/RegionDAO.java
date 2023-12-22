@@ -15,6 +15,7 @@ import com.winter.app.util.DBConnector;
 public class RegionDAO {
 	
 	public RegionDTO getDetail(RegionDTO regionDTO)throws Exception{
+		
 		Connection con = DBConnector.getConnector();
 		
 		String sql = "SELECT * FROM REGIONS WHERE REGION_ID=? and dfd=?";

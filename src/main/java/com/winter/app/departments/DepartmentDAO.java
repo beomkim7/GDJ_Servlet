@@ -4,12 +4,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.winter.app.util.DBConnector;
 
 public class DepartmentDAO {
 	
-	public void getList() throws Exception {
+	//getDetail, 부서번호로 부서정보 조회
+	public void getDetail() {
+		
+	}
+	
+	public List<DepartmentDTO> getList() throws Exception {
+		
+		List<DepartmentDTO> ar = new ArrayList<DepartmentDTO>();
 		//DB접속 후 부서테이블의모든 정보를 출력
 		Connection con = DBConnector.getConnector();
 		
@@ -20,17 +29,21 @@ public class DepartmentDAO {
 		ResultSet rs = st.executeQuery();
 		
 		while(rs.next()) {
-			int id = rs.getInt("DEPARTMENT_ID");
-			int lId = rs.getInt("LOCATION_ID");
-			String name=rs.getString("DEPARTMENT_NAME");
-			int mId = rs.getInt("MANAGER_ID");
 			
-			System.out.println(id+" : "+name+" : "+mId+" : "+lId);
-			System.out.println("============================");
+			DepartmentDTO departmentDTO = new DepartmentDTO();
+			
+			departmentDTO.setDepartment_id(rs.getInt("DEPARTMENT_ID"));
+			departmentDTO.setLocation_id(rs.getInt("LOCATION_ID"));
+			departmentDTO.setDepartment_name(rs.getString("DEPARTMENT_NAME"));
+			departmentDTO.setManager_id(rs.getInt("MANAGER_ID"));
+						
+			
+			ar.add(departmentDTO);
+			
 		}
 		
 		DBConnector.disConnect(rs, st, con);
-		
+		return ar;
 	}
 
 }

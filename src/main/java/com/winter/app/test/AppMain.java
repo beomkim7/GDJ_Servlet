@@ -18,6 +18,7 @@ public class AppMain {
 		try {
 			RegionDTO regionDTO = new RegionDTO();
 			regionDTO.setRegion_id(2);
+			regionDAO =
 			
 			if(regionDTO!=null) {
 				System.out.println(regionDTO.getRegion_name());

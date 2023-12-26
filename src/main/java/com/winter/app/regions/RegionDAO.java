@@ -52,7 +52,7 @@ public class RegionDAO {
 				while(rs.next()) {
 					
 					RegionDTO regionDTO = new RegionDTO();
-					int n = rs.getInt("RESION_ID");
+					int n = rs.getInt("REGION_ID");
 					
 					regionDTO.setRegion_id(n);
 					regionDTO.setRegion_name(rs.getString("REGION_NAME"));

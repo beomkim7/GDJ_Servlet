@@ -7,12 +7,34 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.winter.app.regions.RegionDTO;
 import com.winter.app.util.DBConnector;
 
 public class DepartmentDAO {
 	
 	//getDetail, 부서번호로 부서정보 조회
-	public void getDetail() {
+	public DepartmentDTO getDetail(DepartmentDTO departmentDTO)throws Exception{
+		
+		
+		Connection con = DBConnector.getConnector();
+		
+		String sql = "SELECT * FROM DEPARTMENTS WHERE department_id=?";
+		
+		PreparedStatement st = con.prepareStatement(sql);
+		
+		st.setInt(1, departmentDTO.getDepartment_id());
+		
+		ResultSet rs = st.executeQuery();
+		
+		DepartmentDTO resultDTO=null;
+		
+		if(rs.next()) {
+			resultDTO = new DepartmentDTO();
+			resultDTO.setDepartment_id(rs.getInt("department_id")); 
+			resultDTO.setDepartment_name(rs.getString("department_name")); 
+			resultDTO.setDepartment_name(rs.getString("manager_id")); 
+			resultDTO.setDepartment_name(rs.getString("location_id")); 
+		}return resultDTO;
 		
 	}
 	

@@ -34,6 +34,10 @@
 		<%}%>
 		</tbody>
 	</table>
+	
+	<a href='./add.jsp'>대륙추가</a>
+	
+	
 
 </body>
 </html>

@@ -16,15 +16,15 @@
 <body>
 	<table>
 	<thead>
-		<th>1</th>
-		<th>2</th>
-		<th>3</th>
+		<th>department_id</th>
+		<th>department_name</th>
+		<th>manager_id</th>
 		<th>4</th>
 	</thead>
 	<tbody>
 	<%for(DepartmentDTO departmentDTO : ar){ %>
 		<tr>
-			<td><%= departmentDTO.getDepartment_id() %><td>
+			<td><a href="./detail.jsp?department_id=<%= departmentDTO.department_id()%>"><%= departmentDTO.getDepartment_id() %></a><td>
 			<td><%= departmentDTO.getDepartment_name() %><td>
 			<td><%= departmentDTO.getManager_id() %><td>
 			<td><%= departmentDTO.getLocation_id() %><td>
@@ -37,4 +37,10 @@
 	</table>
 </body>
 </html>
+
+<!-- 
+private int department_id;
+	private String department_name;
+	private int manager_id;
+	private int location_id; -->
 

@@ -27,8 +27,13 @@
 		<tbody>
 		<%for(RegionDTO regionDTO : ar){ //표현식%>
 			<tr>
-			<td><%= regionDTO.getRegion_id() %></td>
-			<td><a href="./detail.jsp?region_id=<%= regionDTO.getRegion_id()%>"><%= regionDTO.getRegion_name() %></a></td>			
+			<td>
+				<%= regionDTO.getRegion_id() %>
+			</td>
+			<td>
+				<a href="./detail.jsp?region_id=<%= regionDTO.getRegion_id()%>">
+				<%= regionDTO.getRegion_name() %></a>
+			</td>			
 			</tr>			
 				
 		<%}%>

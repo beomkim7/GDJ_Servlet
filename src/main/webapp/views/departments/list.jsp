@@ -19,15 +19,24 @@
 		<th>department_id</th>
 		<th>department_name</th>
 		<th>manager_id</th>
-		<th>4</th>
+		<th>getLocation_id</th>
 	</thead>
 	<tbody>
 	<%for(DepartmentDTO departmentDTO : ar){ %>
 		<tr>
-			<td><a href="./detail.jsp?department_id=<%= departmentDTO.department_id()%>"><%= departmentDTO.getDepartment_id() %></a><td>
-			<td><%= departmentDTO.getDepartment_name() %><td>
-			<td><%= departmentDTO.getManager_id() %><td>
-			<td><%= departmentDTO.getLocation_id() %><td>
+			<td>
+				<a href="./detail.jsp?department_id=<%= departmentDTO.getDepartment_id()%>">
+				<%= departmentDTO.getDepartment_id() %></a>
+			</td>
+			<td>
+				<%= departmentDTO.getDepartment_name() %>
+			</td>
+			<td>
+				<%= departmentDTO.getManager_id() %>
+			</td>
+			<td>
+				<%= departmentDTO.getLocation_id() %>
+			</td>
 			
 					
 			
@@ -35,6 +44,8 @@
 		<%} %>	
 	</tbody>
 	</table>
+	
+	<a href='./add.jsp'>추가하기</a>
 </body>
 </html>
 

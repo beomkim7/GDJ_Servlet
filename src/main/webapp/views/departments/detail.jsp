@@ -7,14 +7,8 @@ DepartmentDAO dao = new DepartmentDAO();
 DepartmentDTO dto = new DepartmentDTO();
 
 int id = Integer.parseInt(request.getParameter("department_id"));
-String name = request.getParameter("department_name");
-int man = Integer.parseInt(request.getParameter("manager_id"));
-int loc = Integer.parseInt(request.getParameter("location_id"));
 
 dto.setDepartment_id(id);
-dto.setDepartment_name(name);
-dto.setManager_id(man);
-dto.setLocation_id(loc);
 
 dto = dao.getDetail(dto);
 %>

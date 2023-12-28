@@ -5,6 +5,7 @@
 <%
 	RegionDAO regionDAO = new RegionDAO();
 	RegionDTO regionDTO = new RegionDTO();
+	
 	String id = request.getParameter("region_id");
 	String name = request.getParameter("region_name");
 	

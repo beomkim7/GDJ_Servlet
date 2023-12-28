@@ -5,12 +5,20 @@ import java.sql.Date;
 
 
 public class EmployeeDTO {
+	
+	
 	private int employee_id;
 	private String first_name;
 	private String last_name;
 	private String email;
 	private String phone_number;
 	private Date hire_date;
+	private double Commission_pct;
+	/**
+	
+	 * @return the hire_date2
+	 */
+	
 	private String job_id;
 	private double salary;
 	/**
@@ -104,6 +112,18 @@ public class EmployeeDTO {
 		return salary;
 	}
 	/**
+	 * @return the commission_pct
+	 */
+	public double getCommission_pct() {
+		return Commission_pct;
+	}
+	/**
+	 * @param commission_pct the commission_pct to set
+	 */
+	public void setCommission_pct(double commission_pct) {
+		Commission_pct = commission_pct;
+	}
+	/**
 	 * @param salary the salary to set
 	 */
 	public void setSalary(double salary) {
@@ -112,15 +132,11 @@ public class EmployeeDTO {
 	/**
 	 * @return the commission_root
 	 */
-	public double getCommission_root() {
-		return commission_root;
-	}
+
 	/**
 	 * @param commission_root the commission_root to set
 	 */
-	public void setCommission_root(double commission_root) {
-		this.commission_root = commission_root;
-	}
+
 	/**
 	 * @return the manager_id
 	 */
@@ -145,7 +161,7 @@ public class EmployeeDTO {
 	public void setDepartment_id(int department_id) {
 		this.department_id = department_id;
 	}
-	private double commission_root;
+
 	private int manager_id;
 	private int department_id;
 }

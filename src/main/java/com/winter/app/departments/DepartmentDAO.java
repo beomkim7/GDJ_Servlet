@@ -7,10 +7,12 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.winter.app.employees.EmployeeDTO;
 import com.winter.app.regions.RegionDTO;
 import com.winter.app.util.DBConnector;
 
 public class DepartmentDAO {
+	
 	
 	//Insert
 	public int add(DepartmentDTO departmentDTO) throws Exception {

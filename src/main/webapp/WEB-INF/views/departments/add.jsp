@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>departments add</h1>
-	<form action="./addprocess.jsp">
+	<form action="./addProcess.jsp">
 		<div>
 			매장번호<input type="text"   name="department_id">
 		</div>
@@ -21,9 +21,10 @@
 		<div>
 			위치번호<input type="text" name="location_id">
 		</div>
+		<button>추가</button>
 	</form>
 	
-	<button>추가</button>
+	
 </body>
 </html>
 
